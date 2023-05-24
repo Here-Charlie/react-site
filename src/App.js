@@ -1,13 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import Camera from './components/Camera';
 
 function App() {
   return (
     <div className="App">
-        <img src={logo} className="App-logo" alt="logo" />
+        <Camera />
         <p>
           Here Charlie! A Robot Dog for guidance.
         </p>
+
     </div>
   );
 }
