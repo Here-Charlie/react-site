@@ -35,7 +35,7 @@ video {
   min-width: var(--videoLength);
   max-width: var(--videoLength);
 
-  box-shadow: -0.5rem -0.5rem #464c57;
+  /* box-shadow: -0.5rem -0.5rem #464c57; */
 
   border-radius: 0.5rem;
 }
