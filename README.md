@@ -68,3 +68,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Other Resources
+
+- https://create-react-app.dev/docs/deployment/
+- https://console.firebase.google.com/u/0/project/here-charlie/hosting/sites
+- https://stackoverflow.com/questions/60269680/react-website-not-showing-after-deployment-with-firebase
