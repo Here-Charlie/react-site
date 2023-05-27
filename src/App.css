@@ -6,7 +6,7 @@
 }
 
 :root{
-  --videoLength: 30rem;
+  --videoLength: 50rem;
   --default-background: #282c34;
 }
 
@@ -28,14 +28,23 @@
   color: white;
 }
 
-/* Flip camera direction */
-video {
-  transform: scaleX(-1);
-
+.roboflowCam{
   min-width: var(--videoLength);
   max-width: var(--videoLength);
+  min-height: 80vh;
 
-  /* box-shadow: -0.5rem -0.5rem #464c57; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.roboflowCam video{
+  position: absolute;
+  max-width: var(--videoLength);
+}
+.roboflowCam canvas{
+  position: absolute;
+  z-index: 1;
+  max-width: var(--videoLength);
 
-  border-radius: 0.5rem;
 }
