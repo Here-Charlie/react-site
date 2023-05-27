@@ -19,6 +19,7 @@ const Roboflow = (props) => {
                     console.log("model loaded");
                 }
             }).then((model) => {
+                // Detect every 10 miliseconds 
                 setInterval(() => {
                     if (inferRunning) detect(model);
                 }, 10);
@@ -34,6 +35,8 @@ const Roboflow = (props) => {
             webcamRef.current !== null &&
             webcamRef.current.video.readyState === 4
         ) {
+
+            // Get camera demonsions
             const videoWidth = webcamRef.current.video.videoWidth;
             const videoHeight = webcamRef.current.video.videoHeight;
 
@@ -42,8 +45,10 @@ const Roboflow = (props) => {
 
             adjustCanvas(videoWidth, videoHeight);
 
+            // Detect the object (ex. person) so we can draw boxes around it
             const detections = await model.detect(webcamRef.current.video);
 
+            // ctx is the drawing itself
             const ctx = canvasRef.current.getContext("2d");
             drawBoxes(detections, ctx);
         }
@@ -60,6 +65,8 @@ const Roboflow = (props) => {
     };
 
     const drawBoxes = (detections, ctx) => {
+
+        // Reset previous rectangle detection
         ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
         detections.forEach((row) => {
             if (true) {
