@@ -1,11 +1,11 @@
 import { useRef, useEffect } from "react";
 import Webcam from "react-webcam";
+import TextToSpeech from './textToSpeech';
 
 const Roboflow = (props) => {
     const webcamRef = useRef(null);
     const canvasRef = useRef(null);
     var inferRunning = useRef(true);
-    // var model;
 
     const startInfer = () => {
         window.roboflow
@@ -76,6 +76,8 @@ const Roboflow = (props) => {
                 temp.color = row.color;
                 temp.confidence = row.confidence;
                 row = temp;
+
+                <TextToSpeech text={temp.class} />
             }
 
             if (row.confidence < 0) return;

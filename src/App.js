@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-// import Camera from './components/Camera';
 import Roboflow from "./components/roboflow.js";
 
 function App() {
