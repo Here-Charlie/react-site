@@ -76,8 +76,6 @@ const Roboflow = (props) => {
                 temp.color = row.color;
                 temp.confidence = row.confidence;
                 row = temp;
-
-                <TextToSpeech text={temp.class} />
             }
 
             if (row.confidence < 0) return;
@@ -112,6 +110,14 @@ const Roboflow = (props) => {
             const textHeight = fontSize;
             var textWidth = ctx.measureText(msgTxt).width;
 
+            // Text to Speech
+            const synthesis = window.speechSynthesis;
+
+            // Text to Speech metadata
+            var utterance = new SpeechSynthesisUtterance(classTxt);
+
+            synthesis.speak(utterance);
+
             if (textHeight <= h && textWidth <= w) {
                 ctx.strokeStyle = row.color;
                 ctx.fillStyle = row.color;
@@ -140,6 +146,9 @@ const Roboflow = (props) => {
             }
         });
     };
+
+
+    // console.log(speechMetaData + "hello");
 
     return (
         <div className="roboflowCam">

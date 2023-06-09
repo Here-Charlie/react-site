@@ -13,7 +13,6 @@ function App() {
         <p>
           Here Charlie! A Robot Dog for guidance.
         </p>
-
     </div>
   );
 }
