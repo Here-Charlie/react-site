@@ -5,7 +5,6 @@ const Roboflow = (props) => {
     const webcamRef = useRef(null);
     const canvasRef = useRef(null);
     var inferRunning = useRef(true);
-    // var model;
 
     const startInfer = () => {
         window.roboflow
@@ -110,6 +109,14 @@ const Roboflow = (props) => {
             const textHeight = fontSize;
             var textWidth = ctx.measureText(msgTxt).width;
 
+            // Text to Speech
+            const synthesis = window.speechSynthesis;
+
+            // Text to Speech metadata
+            var utterance = new SpeechSynthesisUtterance(classTxt);
+
+            synthesis.speak(utterance);
+
             if (textHeight <= h && textWidth <= w) {
                 ctx.strokeStyle = row.color;
                 ctx.fillStyle = row.color;
@@ -138,6 +145,9 @@ const Roboflow = (props) => {
             }
         });
     };
+
+
+    // console.log(speechMetaData + "hello");
 
     return (
         <div className="roboflowCam">

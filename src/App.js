@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-// import Camera from './components/Camera';
 import Roboflow from "./components/roboflow.js";
 
 function App() {
@@ -14,7 +13,6 @@ function App() {
         <p>
           Here Charlie! A Robot Dog for guidance.
         </p>
-
     </div>
   );
 }
