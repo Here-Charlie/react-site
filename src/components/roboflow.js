@@ -5,6 +5,8 @@ const Roboflow = (props) => {
     const webcamRef = useRef(null);
     const canvasRef = useRef(null);
     var inferRunning = useRef(true);
+    var tempClass =  "";
+    var sayItOnce = true;
 
     const startInfer = () => {
         window.roboflow
@@ -21,10 +23,11 @@ const Roboflow = (props) => {
                 // Detect every 10 miliseconds 
                 setInterval(() => {
                     if (inferRunning) detect(model);
-                }, 10);
+                }, 0.5);
             });
     };
 
+    // Runs once
     useEffect(startInfer);
 
     const detect = async (model) => {
@@ -115,7 +118,22 @@ const Roboflow = (props) => {
             // Text to Speech metadata
             var utterance = new SpeechSynthesisUtterance(classTxt);
 
-            synthesis.speak(utterance);
+            // synthesis.cancel();
+            // synthesis.speak(utterance);
+
+            if(tempClass === classTxt  && row.confidence*100 > 10 && sayItOnce){
+                synthesis.speak(utterance);
+                sayItOnce = false;
+                // if(synthesis.pending === true){
+                //     synthesis.cancel();
+                // }
+            } else {
+                synthesis.cancel();
+                tempClass = classTxt;
+                sayItOnce = true;
+            }
+
+
 
             if (textHeight <= h && textWidth <= w) {
                 ctx.strokeStyle = row.color;
