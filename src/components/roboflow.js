@@ -5,8 +5,9 @@ const Roboflow = (props) => {
     const webcamRef = useRef(null);
     const canvasRef = useRef(null);
     var inferRunning = useRef(true);
-    var tempClass =  "";
-    var sayItOnce = true;
+
+    // Text to Speech
+    const synthesis = window.speechSynthesis;
 
     const startInfer = () => {
         window.roboflow
@@ -20,10 +21,9 @@ const Roboflow = (props) => {
                     console.log("model loaded");
                 }
             }).then((model) => {
-                // Detect every 10 miliseconds 
                 setInterval(() => {
                     if (inferRunning) detect(model);
-                }, 0.5);
+                }, 10);
             });
     };
 
@@ -112,28 +112,20 @@ const Roboflow = (props) => {
             const textHeight = fontSize;
             var textWidth = ctx.measureText(msgTxt).width;
 
-            // Text to Speech
-            const synthesis = window.speechSynthesis;
-
             // Text to Speech metadata
             var utterance = new SpeechSynthesisUtterance(classTxt);
 
-            // synthesis.cancel();
-            // synthesis.speak(utterance);
-
-            if(tempClass === classTxt  && row.confidence*100 > 10 && sayItOnce){
+            // synthesis.cancel clears the thing currently spoken AND the queue
+            // making it wait one second allows tts to quickly say "person" and then clear everything
+            if (synthesis.speaking === false){
                 synthesis.speak(utterance);
-                sayItOnce = false;
-                // if(synthesis.pending === true){
-                //     synthesis.cancel();
-                // }
-            } else {
-                synthesis.cancel();
-                tempClass = classTxt;
-                sayItOnce = true;
             }
-
-
+            else{
+                // setTimeout is async so the detections will still render
+                setTimeout(() => {
+                    synthesis.cancel();
+                }, 1000);
+            }
 
             if (textHeight <= h && textWidth <= w) {
                 ctx.strokeStyle = row.color;
@@ -163,9 +155,6 @@ const Roboflow = (props) => {
             }
         });
     };
-
-
-    // console.log(speechMetaData + "hello");
 
     return (
         <div className="roboflowCam">
