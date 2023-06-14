@@ -23,7 +23,7 @@ const Roboflow = (props) => {
             }).then((model) => {
                 setInterval(() => {
                     if (inferRunning) detect(model);
-                }, 1);
+                }, 5);
             });
     };
 
