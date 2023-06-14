@@ -7,7 +7,7 @@ function App() {
     <div className="App">
         <Roboflow 
           modelName="whsnet"
-          modelVersion="12"
+          modelVersion="3"
         />
 
         <p>
