@@ -8,6 +8,8 @@
 :root{
   --videoLength: 50rem;
   --default-background: #282c34;
+  --moonstone: #A8D0DB;
+  --moonstone-dark: #61A9BD;
 }
 
 .App {
@@ -20,6 +22,7 @@
   background: var(--default-background);
 
   gap: 2rem;
+  position: relative;
 }
 .App p{
   text-align: center;
@@ -46,5 +49,74 @@
   position: absolute;
   z-index: 1;
   max-width: var(--videoLength);
+}
 
+.modal-popup{
+  display: flex;
+  flex-direction: column;
+
+  width: 55rem;
+  max-width: 120rem;
+
+  border-radius: 0.5rem;
+  height: 30rem;
+
+  border: 0.1rem solid var(--moonstone-dark);
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  gap: 2.5rem;
+  
+  position: absolute;
+  z-index: 1;
+  background: var(--moonstone);
+}
+.modal-popup > img{
+  max-width: 5rem;
+  transform: rotate(0deg);
+  transition: 400ms ease-in-out;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+}
+.modal-popup > img:hover{
+  transform: rotate(35deg);
+  cursor: pointer;
+  transition: 400ms ease-in-out;
+}
+
+.modal-popup-hero{
+  max-width: 50rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1.5rem;
+  font-size: 1.3rem;
+}
+.modal-popup-hero p{
+  font-size: 1.25rem;
+  text-align: left;
+}
+.model-popup video{
+  width: 10rem;
+}
+
+.modal-slide-in{
+  animation: slideIn 550ms ease-in-out;
+}
+
+@keyframes slideIn {
+  from{
+    opacity: 0.5;
+    transform: translateY(5rem);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0rem);
+  }
 }
