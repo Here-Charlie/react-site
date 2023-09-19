@@ -124,7 +124,7 @@ const Roboflow = (props) => {
                 // setTimeout is async so the detections will still render
                 setTimeout(() => {
                     synthesis.cancel();
-                }, 1000);
+                }, 1100);
             }
 
             if (textHeight <= h && textWidth <= w) {
