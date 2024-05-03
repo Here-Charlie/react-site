@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
 
 *{
   padding: 0;
@@ -7,7 +9,8 @@
 
 :root{
   --videoLength: 50rem;
-  --default-background: #282c34;
+  --default-background: #282c34; 
+  --default-background-2: #202634; 
   --moonstone: #A8D0DB;
   --moonstone-dark: #61A9BD;
 }
@@ -119,4 +122,114 @@
     opacity: 1;
     transform: translateY(0rem);
   }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  background: var(--default-background);
+}
+.main-container {
+  max-width: 80vw;
+}
+
+.header {
+  display: flex;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.header-image {
+  max-width: 2.5rem;
+  max-height: 2.5rem;
+}
+.header-branding {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.header-branding p {
+  font-family: 'League Spartan', sans-serif;
+  color: white;
+  font-size: 1.75rem;
+
+  font-weight: 600;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+.content-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.content-hero-text {
+  font-family: 'League Spartan', sans-serif;
+  color: white;
+}
+.content-hero-text-billboard {
+  font-size: 4rem;
+  font-weight: 600;
+}
+.content-hero-text-subtext {
+  font-size: 1.75rem;
+}
+.content-hero img { 
+  max-width: 30rem;
+}
+
+.announcement-background {
+  background: var(--default-background-2);
+  border-radius: 1rem;
+
+  font-family: 'League Spartan', sans-serif;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 3rem 0rem;
+}
+.announcement-header {
+  font-size: 3rem;
+  font-weight: 600;
+
+  max-width: 80%;
+}
+.announcement-subtext {
+  font-size: 1.5rem;
+  line-height: 3rem;
+
+  max-width: 80%;
+  text-align: center;
+}
+
+.feature {
+  font-family: 'League Spartan', sans-serif;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.feature-image {
+  max-width: 30rem;
+  border-radius: 1rem;
+}
+.feature-text-header {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.feature-text-subtext {
+  font-size: 1.5rem;
+  line-height: 3rem;
 }
