@@ -5,7 +5,7 @@ import CharlieLogo from './content/charlie-logo.jpg';
 import CharlieDetection from './content/charlie-detection.png';
 import OpenVino from './content/openvino-logo.png';
 import Charlie from './content/robot.png';
-import UnitedNations from './content/UN.jpg';
+import UnitedNations from './content/UN.png';
 import CharlieDemo from './content/here-charlie-video.mp4';
 
 import Github from './content/github-logo.png';
@@ -57,8 +57,8 @@ function App() {
 
           {/* it's called a content explosion because of how ridiculously large the text is */}
           <section className='content-explosion'>
-            <p className='content-explosion-header'>Service Dogs can up to $50,000 and take two years to train</p>
-            <p className='content-explosion-subtext'>Compare that to Charlie, who has a price point of around <mark>$10,000 or less</mark></p>
+            <p className='content-explosion-header'>Service Dogs can cost up to $50,000 and take two years to train</p>
+            <p className='content-explosion-subtext'>Compare that to Charlie, who has a price point of around <u>$10,000 or less</u></p>
           </section>
 
           <section className='content-explosion-two'>
@@ -66,7 +66,7 @@ function App() {
 
             <div className='content-explosion-two-text'>
               <p className='content-explosion-two-text-header'>And Here's the Impact.</p>
-              <p className='content-explosion-two-text-subtext'>United Nations goals three and ten, Health and Well-Being, and Reducing Inequalities.</p>
+              <p className='content-explosion-two-text-subtext'>United Nations goals three and ten, <b>Health and Well-Being</b>, and <b>Reducing Inequalities.</b></p>
             </div>
           </section>
 
