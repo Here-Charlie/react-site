@@ -86,7 +86,7 @@ function App() {
               <p>Here-Charlie</p>
             </div>
 
-            <a className='content-purchase-button' href='https://here-charlie.github.io'>Order Now</a>
+            <a className='content-purchase-button' href='https://here-charlie.web.app'>Order Now</a>
           </section>
         </main>
 
