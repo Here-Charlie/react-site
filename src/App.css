@@ -189,6 +189,26 @@ mark {
 .content-hero img { 
   max-width: 30rem;
 }
+@media (max-width: 30rem) {
+  
+  .content {
+    gap: 10rem;
+  }
+  .content-hero {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+  .content-hero-text-billboard {
+    font-size: 2.75rem;
+  }
+  .content-hero-text-subtext {
+    font-size: 1.5rem;
+  }
+  .content-hero img {
+    max-width: 20rem;
+  }
+}
 
 .announcement-background {
   background: var(--default-background-2);
@@ -218,6 +238,14 @@ mark {
   max-width: 80%;
   text-align: center;
 }
+@media (max-width: 30rem) {
+  .announcement-header {
+    font-size: 2.5rem;
+  }
+  .announcement-subtext {
+    font-size: 1.35rem;
+  }
+}
 
 .feature {
   font-family: 'League Spartan', sans-serif;
@@ -239,6 +267,16 @@ mark {
 .feature-text-subtext {
   font-size: 1.5rem;
   line-height: 3rem;
+}
+@media (max-width: 30rem) {
+  .feature {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .feature-image {
+    max-width: 100%;
+  }
 }
 
 .content-explosion{
@@ -284,6 +322,29 @@ mark {
   font-size: 2.5rem;
   line-height: 3rem;
 }
+@media (max-width: 30rem) {
+  .content-explosion-header {
+    font-size: 4.5rem;
+  }
+  .content-explosion-subtext {
+    font-size: 2.25rem;
+  }
+  .content-explosion-two {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+  .content-explosion-two img {
+    max-width: 100%;
+  }
+  .content-explosion-two-text-header {
+    font-size: 3.75rem;
+  }
+  .content-explosion-two-text-subtext {
+    font-size: 2.5rem;
+  }
+}
+
 
 .content-demo {
   display: flex;
@@ -311,6 +372,22 @@ mark {
   color: white;
   font-size: 2.5rem;
   line-height: 3.25rem;
+}
+@media (max-width: 30rem) {
+  .content-demo {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+  .content-demo-text-header {
+    font-size: 4rem;
+  }
+  .content-demo-text-subtext {
+    font-size: 2rem;
+  }
+  .content-demo video {
+    max-width: 100%;
+  }
 }
 
 .content-purchase {
@@ -348,6 +425,23 @@ mark {
   border-radius: 1.5rem;
   padding: 1rem 5rem;
   font-weight: 500;
+}
+@media (max-width: 30rem) {
+  .content-purchase {
+    gap: 2rem;
+    min-height: 15rem;
+  }
+  .content-purchase-branding-image {
+    max-width: 3rem;
+    max-height: 3rem; 
+  }
+  .content-purchase-branding p {
+    font-size: 2rem;
+  }
+  .content-purchase-button {
+    font-size: 1.5rem;
+    padding: 0.75rem 3rem;
+  }
 }
 
 footer {
