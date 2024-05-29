@@ -14,6 +14,10 @@ import Feature from './components/Feature';
 
 function App() {
 
+  const sendToGithub = () => {
+    window.open('https://github.com/Here-Charlie');
+  }
+
   return (
     // the main container holds all the content while the container helps to center the main container
     <div className='container'>
@@ -23,7 +27,10 @@ function App() {
             <img className='header-image' alt='charlie-logo' src={CharlieLogo} />
             <p>Here-Charlie</p>
           </div>
-          <img className='header-image' alt='github logo' src={Github} />
+
+          <div className='header-image-hyperlink' onClick={sendToGithub}>
+            <img className='header-image' alt='github logo' src={Github} />
+          </div>
         </section>
 
         <main className='content'>

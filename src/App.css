@@ -149,6 +149,14 @@ mark {
 .header-image {
   max-width: 2.5rem;
   max-height: 2.5rem;
+
+  transform: rotate(0deg);
+  transition: 250ms ease-in-out;
+}
+.header-image:hover {
+  cursor: pointer;
+  transform: rotate(30deg);
+  transition: 250ms ease-in-out;
 }
 .header-branding {
   display: flex;
