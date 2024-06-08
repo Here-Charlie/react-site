@@ -65,7 +65,7 @@ function App() {
           {/* it's called a content explosion because of how ridiculously large the text is */}
           <section className='content-explosion'>
             <p className='content-explosion-header'>Service Dogs can cost up to $50,000 and take two years to train</p>
-            <p className='content-explosion-subtext'>Compare that to Charlie, who has a price point of around <u>$10,000 or less</u></p>
+            <p className='content-explosion-subtext'>Compare that to Charlie, who has a price point of around <u>$15,000 or less</u></p>
           </section>
 
           <section className='content-explosion-two'>
