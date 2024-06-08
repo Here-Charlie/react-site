@@ -58,7 +58,7 @@ function App() {
           <Feature 
             image={OpenVino}
             header={'Trained From Over 10,000 Pictures (and counting)'}
-            subtext={"using YoloV7 and Intel's OpenVino for Charlie to adapt to practically any situtation, outside on the streets or inside the home."}
+            subtext={"using YoloV10 and Intel's OpenVino for Charlie to adapt to practically any situtation, outside on the streets or inside the home."}
             orientation='right'
           />
 
